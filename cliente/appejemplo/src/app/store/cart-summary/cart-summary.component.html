@@ -1,0 +1,14 @@
+<div class="class pull-xs-rigth">
+    <small>
+        <span style="color:#FFFFFF" *ngIf="cart.itemCount > 0">
+            {{cart.itemCount}} item (s)
+            {{cart.cartPrice | currency: "USD": true: "2.2-2"}} item (s)
+        </span>
+        <span style="color:#FFFFFF" *ngIf="cart.itemCount == 0">
+            (empty)
+        </span>
+        <button class="class btn btn-warning" [disabled]="cart.itemCount == 0" routerLink = "/checkout" routerLinkActive="active">
+            <img src="https://cdn2.iconfinder.com/data/icons/ecommerce-tiny-line/64/cart_ecommerce_shop-256.png" width="40" height="35">
+        </button>
+    </small>
+</div>

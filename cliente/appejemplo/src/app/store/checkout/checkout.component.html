@@ -1,0 +1,42 @@
+<app-nav></app-nav>
+
+<div class="container">
+ 
+  <h1 class="text-center" style="margin: 20px 0px"> Cart Line</h1>
+  
+  <table  class="table table-striped ">
+    <thead>
+      <tr>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price Unity</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+        <th scope="col">Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let productscart of productcart">
+        
+        <td >{{productscart.product.productName}}</td>
+        <td >{{productscart.product.MSRP| currency:"USD":true:"2.2-2"}}</td>
+        <td ><input (change)="addcart(productscart.product,$event.target.value)" class="form-control" style="width: 40%"  type="number" min="1" [value]="productscart.quantity"></td>
+        <td >{{productscart.product.MSRP*productscart.quantity | currency:"USD":true:"2.2-2"}}</td>
+        <td ><a  class="btn btn-secondary" (click)="deleteproductos(productscart.product)">Delete</a></td>
+    
+      </tr>
+      <tr >
+        
+        <td ></td>
+        <td ></td>
+        <td >TOTAL:</td>
+        <td> {{cart.cartPrice|currency:"USD":true:"2.2-2"}}</td>
+        <td><a  class="btn btn-info" >Pagar</a></td>
+    
+      </tr>
+      
+    </tbody>
+  </table>
+  
+  </div>
+
+<app-footer></app-footer>

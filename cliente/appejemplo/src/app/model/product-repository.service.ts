@@ -46,4 +46,8 @@ export class ProductRepositoryService {
 
   getVendors = ():string[] => this.vendors;
 
+  getProductsdetail(productcode:string):Product[]{
+    return this.products.filter((p)=>p.productCode==productcode);
+   }
+
 }

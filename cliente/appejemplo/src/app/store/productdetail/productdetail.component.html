@@ -1,0 +1,28 @@
+<app-nav></app-nav>
+  <div class="container" >
+    <div class="row" *ngFor="let P of productcart">
+
+   
+      <div class="col">
+        <img  src="http://placehold.it/700x400" alt="">
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h4 class="card-title">
+            <a  ></a>  
+          </h4>
+          <h5 class="list-inline-item">Name: {{P.productName}}</h5>
+          <p class="card-text">Description:  {{P.productDescription}}</p>
+          <h5 class="list-inline-item">Line: {{P.prodcuctLine}}</h5>
+          <h5 class="list-inline-item">Price: {{P.MSRP| currency:'$'}}</h5>
+
+
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary" (click)="agregarP(P)" > Add </button>
+      </div>
+      </div>
+    </div>
+
+</div>
+<app-footer></app-footer>

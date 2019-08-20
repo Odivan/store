@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductRepositoryService } from '../model/product-repository.service';
 import { Product } from '../model/product';
 import { Cart } from '../model/cart';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-store',
@@ -18,7 +19,8 @@ export class StoreComponent implements OnInit {
 
 
   constructor(private productsRespositoryService: ProductRepositoryService,
-              private cart: Cart) {}
+              private cart: Cart,
+              public router: Router) {}
 
   ngOnInit() {
   }

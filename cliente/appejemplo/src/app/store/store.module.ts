@@ -9,9 +9,11 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RouterModule } from '@angular/router';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
-  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent],
+  declarations: [StoreComponent, NavComponent, FooterComponent, CartSummaryComponent, CartComponent, CheckoutComponent, PageNotFoundComponent, ProductdetailComponent, OrdersComponent],
   imports: [ 
     RouterModule,
     CommonModule

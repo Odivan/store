@@ -1,3 +1,3 @@
 <?php
-    $app->get('/offices','OfficesController:selectOffices');
+    $app->get('/offices','OfficesController:selectOfficess');
 ?>
